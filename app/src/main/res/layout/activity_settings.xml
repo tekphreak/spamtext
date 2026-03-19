@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/enable_service"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Switch
+                android:id="@+id/switchEnable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:thumbTint="#00b140"
+                android:trackTint="#005520" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trigger Conditions"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <CheckBox
+            android:id="@+id/cbTriggerNotInContacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/trigger_not_in_contacts"
+            android:textColor="#FFFFFF"
+            android:buttonTint="#00b140"
+            android:layout_marginBottom="8dp" />
+
+        <CheckBox
+            android:id="@+id/cbTriggerFailedStir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/trigger_failed_stir"
+            android:textColor="#FFFFFF"
+            android:buttonTint="#00b140"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sms_message_label"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tap a tag to insert it at the cursor:"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <Button
+                android:id="@+id/btnInsertTimestamp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="[timestamp]"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/btnInsertDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="[date]"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/btnInsertTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="[time]"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnInsertNumberCalled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="[numbercalled]"
+            android:textSize="10sp" />
+
+        <EditText
+            android:id="@+id/etSmsMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="4"
+            android:maxLines="8"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="8dp"
+            android:padding="8dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:backgroundTint="#00b140" />
+
+        <Button
+            android:id="@+id/btnSaveMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save_message"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnViewLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Call Log" />
+
+    </LinearLayout>
+</ScrollView>
