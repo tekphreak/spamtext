@@ -10,6 +10,11 @@ import kotlinx.coroutines.launch
 
 class SpamCallScreeningService : CallScreeningService() {
 
+    override fun onCreate() {
+    super.onCreate()
+    PrefsHelper.init(this)
+}
+
     private val scope = CoroutineScope(SupervisorJob())
 
     override fun onScreenCall(callDetails: Call.Details) {
